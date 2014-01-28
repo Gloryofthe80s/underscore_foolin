@@ -246,7 +246,48 @@ var stopUnionsBeforeTheyStart = _.union(['fear', 'beans', 'textiles' ], ['loathi
 
 // ---------------------------------------------------------------
 
-// 18)
+// 18) keys: _.keys(object)
+// Retrieve all the names of the object's properties.
+
+// _.keys({one: 1, two: 2, three: 3});
+// => ["one", "two", "three"]
+
+var iceCream = {
+    'melted' : false,
+    'flavor' : 'vanilla',
+    'price' : 'priceless'
+};
+
+var giveProps = _.keys(iceCream);
+// => ["melted", "flavor", "price"]
+
+// ---------------------------------------------------------------
+
+// 19) values: _.values(object)
+// Return all of the values of the object's properties.
+
+// _.values({one: 1, two: 2, three: 3});
+// => [1, 2, 3]
+
+var giveValues = _.values(iceCream);
+// => [false, "vanilla", "priceless"]
+
+// ---------------------------------------------------------------
+
+// 20) extend: _.extend(destination, *sources)
+// Copy all of the properties in the source objects over to the destination object, and return the destination object. It's in-order, so the last source will override properties of the same name in previous arguments.
+
+// _.extend({name: 'moe'}, {age: 50});
+// => {name: 'moe', age: 50}
+
+var otherworldly = {
+    'origin' : 'otherworldly'
+}
+var otherworldlyIceCream = _.extend(iceCream, otherworldly);
+// => Object {melted: false, flavor: "vanilla", price: "priceless", origin: "otherworldly"}
+
+
+
 
 
 
