@@ -286,8 +286,18 @@ var otherworldly = {
 var otherworldlyIceCream = _.extend(iceCream, otherworldly);
 // => Object {melted: false, flavor: "vanilla", price: "priceless", origin: "otherworldly"}
 
+// ---------------------------------------------------------------
 
+// 20) random: _.random(min, max)
+// Returns a random integer between min and max, inclusive. If you only pass one argument, it will return a number between 0 and that number.
 
+// _.random(0, 100);
+// => 42
+
+function d6(howMany) {
+    var total = _.random(1,6) * howMany;
+    return total;
+}
 
 
 
